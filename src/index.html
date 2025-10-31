@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laptop Online Store</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8') no-repeat center center/cover;
+      height: 100vh;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 60px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      color: #fff;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: #00bcd4;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+    }
+
+    ul li {
+      margin: 0 20px;
+      position: relative;
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    ul li a:hover {
+      color: #00bcd4;
+    }
+
+    ul li::after {
+      content: "";
+      height: 2px;
+      width: 0;
+      background: #00bcd4;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      transition: 0.4s;
+    }
+
+    ul li:hover::after {
+      width: 100%;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: white;
+      border-radius: 25px;
+      padding: 5px 15px;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      padding: 8px;
+      border-radius: 25px;
+    }
+
+    .search-box button {
+      background: #00bcd4;
+      border: none;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .search-box button:hover {
+      background: #008ba3;
+    }
+
+    /* Animation effect */
+    nav {
+      animation: slideDown 0.8s ease-in-out;
+    }
+
+    @keyframes slideDown {
+      from {transform: translateY(-100%);}
+      to {transform: translateY(0);}
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Lap<span>Top</span>Store</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Laptops</a></li>
+      <li><a href="#">Accessories</a></li>
+      <li><a href="#">Offers</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="search-box">
+      <input type="text" placeholder="Search Laptop...">
+      <button>Search</button>
+    </div>
+  </nav>
+
+</body>
+</html>
